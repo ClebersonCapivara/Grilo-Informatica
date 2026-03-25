@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(96, 218, 40);
+    color: azure;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(156, 255, 90, 0.94), rgba(54, 180, 36, 0.94));
+    color: azure;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #f5ffe7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 360px;
+    margin-right: 20px;
+}
+
+.search input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#search-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(43, 168, 20, 0.9);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#search-button:hover {
+    opacity: 0.95;
+    transform: scale(1.05);
+}
+
+.fav,
+.cart {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.fav button,
+#carrinho {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    color: azure;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+.fav button:hover,
+#carrinho:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.menu nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: azure;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}    display: flex;
+    align-items: center;
+}
+.favoritos{
+    margin-right: 10px;
+    display: inline-block;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+#carrinho {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: azure;
+    font-size: 12px;
+}
+#carrinho:hover {
+    opacity: 0.8;
+}
+#carrinho p {
+    margin: 5px 0 0 0;
+}
+.menu a
+{
+    text-decoration: none;      
+    color: azure;
+    margin: 5px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.menu a:hover
+{
+    text-decoration: none;      
+    color: rgb(234, 255, 255);
+    margin: 5px;
+    font-size: 20px;
+}
+
+.content{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 20px;
+   padding: 20px;
+}
+
+.pecas-page .content {
+   align-items: start; /* cada item cresce por si só, sem forçar altura igual */
+   grid-auto-rows: min-content; /* altura automática conforme conteúdo interno */
+   grid-template-columns: 1fr 1fr; /* duas colunas iguais só aqui*/
+}
+
+.produto {
+   background-color: rgba(156, 255, 90, 0.3);
+   border: 2px solid rgba(156, 255, 90, 0.808);
+   border-radius: 10px;
+   padding: 15px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produto h2 {
+   margin-top: 0;
+   color: azure;
+}
+
+.produto img {
+   width: 100%;
+   border-radius: 8px;
+   margin-bottom: 10px;
+}
+
+.produto button {
+   width: 48%;
+   padding: 10px;
+   background-color: rgba(156, 255, 90, 0.808);
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 14px;
+   margin-top: 10px;
+   margin-right: 2%;
+}
+
+.produto button:last-child {
+   margin-right: 0;
+}
+
+.produto button:hover {
+   background-color: rgb(172, 238, 128);
+   transform: translateY(-5px);
+}
+
+.produto:hover{
+    transform: translateY(-3px)
+}
+ 
+.produtos-proprios {
+   background-color: rgba(156, 255, 90, 0.3);
+   border: 2px solid rgba(156, 255, 90, 0.808);
+   border-radius: 10px;
+   padding: 15px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produtos-alternativos {
+   background-color: rgba(156, 255, 90, 0.3);
+   border: 2px solid rgba(156, 255, 90, 0.808);
+   border-radius: 10px;
+   padding: 15px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aba-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+  
+summary {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* Remove a setinha padrão no Chrome/Safari */
+}
+
+summary::after {
+    content: '+'; /* Adiciona um ícone customizado */
+    float: right;
+}
+
+details[open] summary::after {
+    content: '-'; /* Muda o ícone quando aberto */
+}
+
+.conteudo {
+    padding: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.titulo{
+    text-align: center;
+    background-color: #04740a;
+    padding: 10px;
+}
+.subtitulo{
+    text-align: center;
+    background-color:#05a00d;
+    padding: 10px;
+}
+footer
+{
+
+    text-align: center;
+    margin-bottom:10px ;
+    position: sticky;
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+footer p
+{
+    margin-top: 15px;
+}
+#carrinho-conteudo .item-carrinho {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+#carrinho-conteudo .item-carrinho button {
+  background: #05a00d;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.carrinho{
+        background-color: rgba(156, 255, 90, 0.3);
+        border: 2px solid rgba(156, 255, 90, 0.808);
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+    color: #696969;
+}

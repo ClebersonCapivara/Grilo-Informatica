@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Pagamento</title>
+    <link rel="stylesheet" href="Paywall1.css">
+</head>
+<body>
+<div class="checkout-container">
+        
+        <h1>✅ Confirme Seu Pedido</h1>
+        
+        <div class="order-summary">
+            <h2>Detalhes da Compra</h2>
+            
+            <ul class="item-list">
+                <li>
+                    <span>[PRODUTO]</span>
+                    <span>R$ XX,xx</span>
+                </li>
+            </ul>
+
+            <div class="totals-section">
+                <div class="total-line">
+                    <span>Subtotal</span>
+                    <span>R$ XX,xx</span>
+                </div>
+                <div class="total-line">
+                    <span>Taxa de Entrega</span>
+                    <span>R$ XX,xx</span>
+                </div>
+                <div class="total-line grand-total">
+                    <span>Total a Pagar</span>
+                    <span>R$ XX,xx</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Dados para Entrega</h2>
+
+            <form action="#processar-pedido" method="post">
+                
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <div class="form-row">
+                    <div>
+                        <label for="tel">Telefone</label>
+                        <input type="tel" id="tel" name="telefone" required>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <label for="endereco">Endereço Completo (Rua, Número, Bairro)</label>
+                <input type="text" id="endereco" name="endereco" required>
+                
+                <label for="pagamento">Forma de Pagamento (Pagar na Entrega)</label>
+                <input type="text" id="pagamento" name="pagame nto" value="Cartão ou Pix na Entrega" readonly style="background-color: #e9ecef;">
+                
+                <button type="submit" class="cta-button">FINALIZAR E ENVIAR PEDIDO</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const produto = JSON.parse(localStorage.getItem('produtoPaywall'));
+            const carrinho = JSON.parse(localStorage.getItem('carrinhoPaywall')) || [];
+
+            const precos = {
+                ram: { '8gb': 150, '16gb': 450, '32gb': 1500, '64gb': 2500, '128gb': 5500 },
+                processador: { 'i5': 630, 'i7': 2300, 'R5': 600, 'R7': 1200 },
+                gpu: { 'GeForce RTX 4060 (8 GB)': 2300, 'GeForce RTX 4060 Ti (16 GB)': 3500, 'GeForce RTX 5090': 22000, 'GeForce RTX 5080': 9900, 'GeForce RTX 5070 Ti': 7000, 'RX 6600': 1500, 'RX 6600 XT': 2000, 'RX 7600': 2500, 'Radeon RX 7900 XTX': 7500, 'Radeon RX 7900 XT': 5000, 'Radeon RX 7800 XT': 3700 }
+            };
+
+            function calcularPrecoProduto(item) {
+                if (item.preco && !isNaN(item.preco) && Number(item.preco) > 0) {
+                    return Number(item.preco);
+                }
+                if (item.ram && item.processador && item.gpu) {
+                    return (precos.ram[item.ram] || 0) + (precos.processador[item.processador] || 0) + (precos.gpu[item.gpu] || 0);
+                }
+                return 0;
+            }
+
+            function formatarValor(valor) {
+                return `R$ ${valor.toFixed(2).replace('.', ',')}`;
+            }
+
+            let itens = [];
+            if (carrinho && carrinho.length > 0) {
+                itens = carrinho;
+            } else if (produto) {
+                itens = [produto];
+            }
+
+            if (itens.length === 0) {
+                document.querySelector('.item-list li span:first-child').textContent = 'Produto não selecionado';
+                document.querySelector('.item-list li span:last-child').textContent = 'R$ 00,00';
+                document.querySelector('.totals-section .total-line:nth-child(1) span:last-child').textContent = 'R$ 00,00';
+                document.querySelector('.totals-section .total-line:nth-child(2) span:last-child').textContent = 'R$ 00,00';
+                document.querySelector('.totals-section .grand-total span:last-child').textContent = 'R$ 00,00';
+                return;
+            }
+
+            const listaHtml = document.querySelector('.item-list');
+            listaHtml.innerHTML = '';
+
+            let subtotal = 0;
+
+            itens.forEach((item) => {
+                const precoItem = calcularPrecoProduto(item);
+                subtotal += precoItem;
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${item.nome || 'Produto'}</span><span>${formatarValor(precoItem)}</span>`;
+                listaHtml.appendChild(li);
+            });
+
+            const taxaBase = 20;
+            const taxaAdicional = itens.some(i => i.nome === 'PC Gamer Pro') ? 45 : 0;
+            const taxaEntrega = taxaBase + taxaAdicional;
+            const total = subtotal + taxaEntrega;
+
+            document.querySelector('.totals-section .total-line:nth-child(1) span:last-child').textContent = formatarValor(subtotal);
+            document.querySelector('.totals-section .total-line:nth-child(2) span:last-child').textContent = formatarValor(taxaEntrega);
+            document.querySelector('.totals-section .grand-total span:last-child').textContent = formatarValor(total);
+        });
+    </script>
+
+</body>
+</html>

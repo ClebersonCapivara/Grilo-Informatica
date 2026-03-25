@@ -1,0 +1,32 @@
+linha,nome do produto,descrição,preço
+CX,Core X5 Pro,CPU 6 núcleos/12 threads 3.8 GHz base 4.2 GHz boost, R$2499
+CX,Core X9 Extreme,CPU 12 núcleos/24 threads 4.5 GHz base 5.0 GHz boost, R$3499
+CX,RayForce G7,GPU 8GB GDDR6 Ray Tracing básico clock 1.8 GHz, R$4999
+CX,RayForce G9 Ultra,GPU 16GB GDDR6X Ray Tracing avançado clock 2.2 GHz, R$7499
+CX,BlazeRAM 16GB Pro,Memória DDR4 3200 MHz CL16, R$699
+CX,BlazeRAM 32GB Ultra,Memória DDR5 5600 MHz CL14, R$1299
+CX,HyperDrive 1000 Pro,SSD NVMe PCIe 4.0 1TB leitura 3500 MB/s, R$999
+CX,HyperDrive 2000 Ultra,SSD NVMe PCIe 5.0 2TB leitura 7000 MB/s, R$1799
+CX,Flux 750W Pro,Fonte 80 Plus Gold cabos semi-modulares, R$599
+CX,Flux 1000W Ultra,Fonte 80 Plus Platinum cabos modulares, R$899
+CX,CryoCool 240 Pro,Watercooler 240mm com ventoinhas RGB, R$349
+CX,CryoCool 360 Ultra,Watercooler 360mm com ventoinhas de alta pressão RGB, R$499
+CX,NexusBoard B550,Placa-mãe chipset B550 com suporte DDR4 até 64GB, R$899
+CX,NexusBoard X790 Extreme,Placa-mãe chipset X790 suporte DDR5 até 128GB, R$1499
+CX,ArcCase MidTower,Gabinete ATX com vidro temperado e 3 ventoinhas RGB, R$499
+CX,ArcCase FullTower RGB,Gabinete E-ATX com vidro e 5 ventoinhas RGB, R$899
+GX,GX 1000 Ultra,PC gamer com Core X5 Pro RayForce G7 16GB RAM SSD 1TB, R$5499
+GX,GX 9000 Titan,PC gamer com Core X9 Extreme RayForce G9 Ultra 32GB RAM SSD 2TB, R$12499
+GX,Vortex 700 Max,PC gamer intermediário com Core X7 RayForce G8 32GB RAM SSD 2TB, R$7999
+GX,Shadow X9 Elite,PC gamer avançado com Core X9 RayForce G9 32GB RAM SSD 2TB, R$9499
+GX,Blaze 1000 Inferno,PC gamer com Core X7 RayForce G8 16GB RAM SSD 1TB, R$8799
+NX,NX 550 Max,Notebook 15.6” Full HD Core X5 Pro Mobile GPU G7 Mobile 16GB RAM SSD 1TB, R$6299
+NX,Zenith 700 Ultra,Notebook 17” QHD 165Hz Core X9 Extreme Mobile GPU G9 Ultra Mobile 32GB RAM SSD 2TB, R$10499
+NX,AeroBook 17 Ultra,Notebook 17” Full HD Core X7 Mobile GPU G8 Mobile 16GB RAM SSD 1TB, R$9199
+NX,FlexNote 600 Max,Notebook 15” Full HD Core X7 Mobile GPU G8 Mobile 16GB RAM SSD 1TB, R$7499
+NX,PulseBook 17 Extreme,Notebook 17” Full HD 144Hz Core X9 Mobile GPU G9 Mobile 32GB RAM SSD 2TB, R$8899
+PX,Storm M90 Ultra,Mouse gamer 26000 DPI 8 botões programáveis RGB, R$399
+PX,Pulse K100 Max,Teclado mecânico com switches ópticos RGB por tecla, R$699
+PX,Echo H90 Ultra,Headset gamer 7.1 drivers 50mm microfone com cancelamento de ruído, R$899
+PX,ArcPad 600 RGB,Mousepad gamer XL com iluminação RGB, R$249
+PX,NovaCam 60 Ultra,Webcam Full HD 1080p com foco automático e microfone integrado, R$599

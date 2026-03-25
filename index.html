@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilo Informatica - A Melhor Loja De Informática Online Do Brasil</title>
+    <link rel="shortcut icon" href="grilo_logo_minimalista_preta.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Grilo Informatica</h1>
+        <div class = "search">
+            <input type="search" placeholder="O que você procura?">
+            <button id="search-button" onclick="realizarBusca()">
+                <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Lupa" width="20" onclick="pesquisar()">
+            </button>
+        </div>
+        <div class="fav">
+            <button id="favoritos">
+             <img src="https://cdn-icons-png.flaticon.com/512/126/126471.png" alt="Favoritos" width="20">
+             <p>Favoritos</p>
+            </button>
+        </div>
+        <div class="cart">
+            <a href="carrinho.html" style="text-decoration: none;">
+                <button id="carrinho">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Carrinho" width="20">
+                    <p>Carrinho</p>
+                </button>
+            </a>
+        </div>
+        <div class = "menu">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="monte-seu-pc.html">Monte seu PC</a>
+                <a href="pcs.html">PCs</a>
+                <a href="pecas.html">Peças</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="#Contato">Contato</a> 
+            </nav>    
+        </div>
+    </header>
+    <h1 class="titulo"><b>PRODUTOS EM DESTAQUE</b></h1>
+        <h2 class="subtitulo">MAIS COMPRADOS</h2>
+            <div class= "content">
+
+        
+              <!-- item 1 -->
+               <div class="produto">
+                    <h2> PC Gamer Basic </h2>
+                   <img src="https://cdn.awsli.com.br/2500x2500/2539/2539199/produto/265876315/1-sg0b2zz3rk.png" alt="foto do produto">
+                       <p> [Descrição breve] </p>
+
+                      <!-- Memoria Ram  -->
+                      <label> Memória Ram </label>
+                      <select name="ram" id="ram">
+                          <option value="8gb"> 8gb </option>
+                          <option value="16gb"> 16gb </option>
+                          <option value="32gb"> 32gb </option>
+                      </select>
+
+                      <!-- Processador  -->
+                      <label> Processador </label>
+                      <select name="Processador" id="Processador">
+
+                          <optgroup label="Intel">
+                              <option value="i5"> Intel i5 </option>
+                              <option value="i7"> Intel i7 </option>
+                          </optgroup>
+
+                          <optgroup label="AMD">
+                              <option value="R5"> AMD R5 </option>
+                              <option value="R7"> AMD R7 </option>
+                          </optgroup>
+                      </select>
+
+                       <!-- GPU  -->
+                       <label> Placa De Video</label>
+                       <select name="GPU" id="GPU">
+                           <optgroup label="NVIDIA">
+                               <option value="GeForce RTX 4060 (8 GB)"> GeForce RTX 4060 (8 GB) </option>
+                               <option value="GeForce RTX 4060 Ti (16 GB)"> GeForce RTX 4060 Ti (16 GB) </option>
+                           </optgroup>
+                           <optgroup label="AMD">
+                               <option value="RX 6600"> RX 6600 </option>
+                               <option value="RX 6600 XT"> RX 6600 XT </option>
+                               <option value="RX 7600"> RX 7600 </option>
+                           </optgroup>
+                       </select>
+
+                       <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+                       <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+                </div>
+    
+             <!-- item 2 -->
+                  <div class="produto">
+                     <h2> PC Gamer Pro </h2>
+                  <img src="https://cdn.awsli.com.br/600x1000/2557/2557636/produto/217459903/1024-dzmlj4etsd.png" alt="foto do produto">
+                     <p> [Descrição breve] </p>
+
+                     <!-- Memoria Ram  -->
+                     <label> Memória Ram </label>
+                     <select name="ram" id="ram">
+                         <option value="8gb"> 8gb </option>
+                         <option value="16gb"> 16gb </option>
+                         <option value="32gb"> 32gb </option>
+                         <option value="64gb"> 64gb </option>
+                         <option value="128gb"> 128gb </option>
+                     </select>
+
+                     <!-- Processador  -->
+                     <label> Processador </label>
+                     <select name="Processador" id="Processador">
+
+                         <optgroup label="Intel">
+                             <option value="i5"> Intel i5 </option>
+                             <option value="i7"> Intel i7 </option>
+                         </optgroup>
+
+                           <optgroup label="AMD">
+                              <option value="R5"> AMD R5 </option>
+                               <option value="R7"> AMD R7 </option>
+                          </optgroup>
+                       </select>
+
+                        <!-- GPU  -->
+                        <label> Placa De Video</label>
+                        <select name="GPU" id="GPU">
+                            <optgroup label="NVIDIA">
+                                <option value="GeForce RTX 4060 (8 GB)"> GeForce RTX 4060 (8 GB) </option>
+                                <option value="GeForce RTX 4060 Ti (16 GB)"> GeForce RTX 4060 Ti (16 GB) </option>
+                                <option value="GeForce RTX 5090"> GeForce RTX 5090 </option>
+                                <option value="GeForce RTX 5080"> GeForce RTX 5080 </option>
+                                <option value="GeForce RTX 5070 Ti"> GeForce RTX 5070 Ti </option>
+
+                            </optgroup>
+                          <optgroup label="AMD">
+                             <option value="RX 6600"> RX 6600 </option>
+                             <option value="RX 6600 XT"> RX 6600 XT </option>
+                             <option value="RX 7600"> RX 7600 </option>
+                               <option value="Radeon RX 7900 XTX"> Radeon RX 7900 XTX </option>
+                              <option value="Radeon RX 7900 XT"> Radeon RX 7900 XT </option>
+                              <option value="Radeon RX 7800 XT"> Radeon RX 7800 XT </option>
+                            </optgroup>
+                        </select>
+
+                        <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+                       <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+             </div>
+             <!--item 3--->
+              <div class="produto">
+                   <h2> Notebook Gamer Lenovo Basic </h2>
+                   <img src="https://i.zst.com.br/thumbs/12/0/3c/-724408071.jpg" alt="foto do produto">
+                      <p> [Descrição breve] </p>
+
+                      <!-- Memoria Ram  -->
+                      <label> Memória Ram </label>
+                      <select name="ram" id="ram">
+                          <option value="8gb"> 8gb </option>
+                          <option value="16gb"> 16gb </option>
+                      </select>
+
+                      <!-- Processador  -->
+                      <label> Processador </label>
+                      <select name="Processador" id="Processador">
+
+                           <optgroup label="Intel">
+                              <option value="i5"> Intel i5 </option>
+                              <option value="i7"> Intel i7 </option>
+                          </optgroup>
+
+                            <optgroup label="AMD">
+                                <option value="R5"> AMD R5 </option>
+                                <option value="R7"> AMD R7 </option>
+                            </optgroup>
+                        </select>
+
+                        <!-- GPU  -->
+                        <label> Placa De Video</label>
+                        <select name="GPU" id="GPU">
+                            <optgroup label="NVIDIA">
+                                <option value="GeForce RTX 4060 (8 GB)"> GeForce RTX 4060 (8 GB) </option>
+                             <option value="GeForce RTX 4060 Ti (16 GB)"> GeForce RTX 4060 Ti (16 GB) </option>
+                            </optgroup>
+                            <optgroup label="AMD">
+                                <option value="RX 6600"> RX 6600 </option>
+                                <option value="RX 6600 XT"> RX 6600 XT </option>
+                                <option value="RX 7600"> RX 7600 </option>
+                            </optgroup>
+                        </select>
+
+                        <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+                        <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+                </div>
+    
+            </div>
+    
+    <h2 class="subtitulo">PRODUTOS GRILMC</h2>
+    
+        <div class="content">
+         <!-- Produtos GrilMC -->
+         
+            <div class="produto">
+              <h2>CX RayForce G7</h2>
+              <img src="img/CX RayForce G7.png" alt="CX RayForce G7">
+             <p> GPU 8GB GDDR6 Ray Tracing básico clock 1.8 GHz </p>
+             <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+             <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+         </div>
+        
+            <div class="produto">
+               <h2>CX RayForce G9 Ultra</h2>
+                <img src="img/CX RayForce G9 Ultra.png" alt="CX RayForce G9">
+                <p> GPU 16GB GDDR6 Ray Tracing avançado clock 2.0 GHz </p>
+                <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+                <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+         </div>
+         
+         <div class="produto">
+               <h2>CX HyperDrive 2000 Ultra</h2>
+                <img src="img/CX HyperDrive 2000 Ultra.png" alt="CX HyperDrive 2000 Ultra">
+                <p> SSD NVMe PCIe 5.0 2TB leitura 7000 MB/s </p>
+                <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+                <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+         </div>
+        
+         <div class="produto">
+               <h2>GX Blaze 1000 Inferno</h2>
+                <img src="img/GX Blaze 1000 Inferno.png" alt="GX Blaze 1000 Inferno" width="500">
+                <p> PC gamer com Core X7 RayForce G8 16GB RAM SSD 1TB </p>
+                <select name="ram" id="ram" disabled>
+                    <option value="16gb"> 16gb </option>
+                </select>
+                <select name="Processador" id="Processador" disabled>
+                    <option value="R7"> AMD R7 </option>
+                </select>
+                <select name="GPU" id="GPU" disabled>
+                    <option value="CX RayForce G8"> CX RayForce G8 </option>
+                </select>
+                
+                <button type="button" class="btn-comprar"> Adicionar ao Carrinho </button>
+                <button type="button" class="btn-comprar-agora"> Comprar Agora </button>
+         </div>
+    
+        </div>
+    <p></p>
+ <br>
+    <footer class= "subtitulo">
+        <p>© 2026 Grilo Co. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Equipe Grilo com ❤️.</p>
+        <a name="Contato"></a>
+        <p>Contato: +55(xx)XXXX-XXXX</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
