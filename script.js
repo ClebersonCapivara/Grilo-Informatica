@@ -129,19 +129,19 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Verificar e adicionar ram se existir
-            const ramSelect = produtoDiv.querySelector('#ram');
+            const ramSelect = produtoDiv.querySelector('.ram');
             if (ramSelect) {
                 produto.ram = ramSelect.value;
             }
             
             // Verificar e adicionar processador se existir
-            const processadorSelect = produtoDiv.querySelector('#Processador');
+            const processadorSelect = produtoDiv.querySelector('.processador');
             if (processadorSelect) {
                 produto.processador = processadorSelect.value;
             }
             
             // Verificar e adicionar gpu se existir
-            const gpuSelect = produtoDiv.querySelector('#GPU');
+            const gpuSelect = produtoDiv.querySelector('.gpu');
             if (gpuSelect) {
                 produto.gpu = gpuSelect.value;
             }
@@ -165,19 +165,19 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Verificar e adicionar ram se existir
-            const ramSelect = produtoDiv.querySelector('#ram');
+            const ramSelect = produtoDiv.querySelector('.ram');
             if (ramSelect) {
                 produto.ram = ramSelect.value;
             }
             
             // Verificar e adicionar processador se existir
-            const processadorSelect = produtoDiv.querySelector('#Processador');
+            const processadorSelect = produtoDiv.querySelector('.processador');
             if (processadorSelect) {
                 produto.processador = processadorSelect.value;
             }
             
             // Verificar e adicionar gpu se existir
-            const gpuSelect = produtoDiv.querySelector('#GPU');
+            const gpuSelect = produtoDiv.querySelector('.gpu');
             if (gpuSelect) {
                 produto.gpu = gpuSelect.value;
             }
@@ -209,8 +209,10 @@ function visualizarCarrinho() {
 function redirecionarParaPaywall(produto) {
     if (Array.isArray(produto)) {
         localStorage.setItem('carrinhoPaywall', JSON.stringify(produto));
+        localStorage.removeItem('produtoPaywall');
     } else {
         localStorage.setItem('produtoPaywall', JSON.stringify(produto));
+        localStorage.removeItem('carrinhoPaywall');
     }
     window.location.href = 'Paywall1.html';
 }
